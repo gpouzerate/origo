@@ -47,9 +47,7 @@ class BikeService {
                 }
             }
 
-            override fun onFailure(call: Call<StationInfoResponse>, t: Throwable) {
-                errorCb(t.localizedMessage)
-            }
+            override fun onFailure(call: Call<StationInfoResponse>, t: Throwable) = errorCb(t.localizedMessage)
         })
     }
 
@@ -73,9 +71,7 @@ class BikeService {
                 }
             }
 
-            override fun onFailure(call: Call<StationStatusResponse>, t: Throwable) {
-                errorCb(t.localizedMessage)
-            }
+            override fun onFailure(call: Call<StationStatusResponse>, t: Throwable) = errorCb(t.localizedMessage)
         })
     }
 }
